@@ -1,0 +1,25 @@
+{
+  "name": "TypingTestApp",
+  "version": "0.0.0",
+  "description": "TypingTestApp",
+  "main": "app.js",
+  "author": {
+    "name": "Bassam Al Rubaye",
+    "email": ""
+  },
+  "dependencies": {
+    "cors": "^2.5.3",
+    "express": "3.4.4",
+    "jade": "*",
+    "stylus": "*"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.11",
+    "gulp-webserver": "^0.9.0",
+    "jasmine-core": "^2.2.0",
+    "karma": "^0.12.31",
+    "karma-chrome-launcher": "^0.1.7",
+    "karma-firefox-launcher": "^0.1.4",
+    "karma-jasmine": "^0.3.5"
+  }
+}

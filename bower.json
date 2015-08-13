@@ -1,0 +1,29 @@
+{
+  "name": "TypingTestApp",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "express",
+    "angularjs"
+  ],
+  "authors": [
+    "Bassam Al Rubaye"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "angular": "~1.3.13",
+    "angular-route": "~1.3.13",
+    "angular-mocks": "~1.3.13"
+  }
+}
