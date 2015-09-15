@@ -1,0 +1,95 @@
+﻿
+
+<div class="page-header" id="banner">
+        <div class="row">
+         
+            <h1>{{title}}</h1>
+            <p class="lead">Click the "Start Test" to begin your 60 second interactive test  as you type you will have a notifications about your typing if they are right or wrong.  </p>
+               
+        </div>
+</div>
+
+<div >
+
+    
+
+    <div class="row">
+        <div class="col-md-4 float-right">
+            <b> Timer:</b> <div class="timer"> <span class="badge">{{timer}} </span> seconds</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="bs-component">
+            <div class="panel panel-default" ng-init="curPosition=0">
+                <div class="panel-body">
+                <span class="word" ng-repeat="l in pargh track by $index"
+                      ng-class="{pointer: $parent.curPosition===$index, match: l.status==='r', nomatch: l.status==='w'}">{{l.letter }} &nbsp;</span>
+                    </div>
+            </div>
+        </div>
+
+    <div >
+
+
+<div class="col-lg-8 center-block">
+        <div class="input-group">
+            
+            <input class="form-control" placeholder="Start typing here ..."
+                     ng-disabled="!isInputData" ng-list=" " ng-trim="false" ng-model="enteredData"></textarea>
+            
+            <span class="input-group-btn">
+                <button class="btn btn-success" type="button" ng-click="startTimer()">{{controlTimer}}</button>
+            </span>
+        </div>
+
+        <div class="">
+ </div>           
+               
+            
+
+        </div>
+    </div>
+  </div>
+
+    <div class="row">
+        <div class="col-lg-4 center-block">
+        <div class="bs-component">
+            <div class="modal" ng-if="showResult">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" ng-Click="$parent.showResult=false" >×</button>
+                            <h4 class="modal-title">Your test score</h4>
+                        </div>
+                        <div class="modal-body">
+                            <div class="row">
+                            <span class="pull-left bold">Words per minuit:</span>  <span class="pull-right">{{testScore.wpm}}</span> 
+                            </div>
+
+                            <div class="row">
+                             <span class="pull-left bold">Keystrokes:</span>  <span class="pull-right">{{testScore.keyStrokes}}</span>
+                            </div>
+
+                            <div class="row">
+                                 <span class="pull-left bold">Correct words: </span> <span class="pull-right">{{testScore.wpm - testScore.errorsCount }}  </span>
+                             </div>
+
+                             <div class="row">
+                                <span class="pull-left bold">Wrong words:</span> <span class="pull-right">{{testScore.errorsCount}} </span>
+                            </div
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal" ng-Click="$parent.showResult=false">Close</button>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="source-button" class="btn btn-primary btn-xs" style="display: none;">&lt; &gt;</div>
+        </div>
+    </div>
+</div>
+
+</div>

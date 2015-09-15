@@ -1,0 +1,35 @@
+
+
+<div class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="#/" class="navbar-brand">TypingTest</a>
+            <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        
+        <div class="col-lg-6 col-md-6 center-block">
+        <div class="navbar-collapse collapse" id="navbar-main">
+            <ul class="nav navbar-nav">
+
+                <li ng-class="{active: selectedLink==0}">
+                    <a href="#/" ng-click="selectedLink=0">Home</a>
+                </li>
+
+                <li ng-class="{active: selectedLink==1}">
+                    <a href="#/test" ng-click="selectedLink=1">Take Test</a>
+                </li>
+                <li ng-class="{active: selectedLink==2}">
+                    <a href="#/about" ng-click="selectedLink=2">About</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+    </div>
+</div>
