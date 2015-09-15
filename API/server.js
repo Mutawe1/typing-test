@@ -16,6 +16,8 @@ var paragraph= require("./models/paragraph");
 var paragraphService= require('./services/paragraphService');
 
 
+var port = process.env.PORT || 8080;
+
 for (var key in paragraphService) {
     console.log(key);
     //if (object.hasOwnProperty(key)) {
@@ -83,7 +85,7 @@ server.get("/test/:p", function (req, res) {
     })
 });
 
-server.listen(3002, function () {
-    console.log("Express is listening for requests !");
+server.listen(port, function () {
+    console.log("Express is listening for requests ! : " + port);
 });
 
