@@ -2,7 +2,10 @@
   "name": "TypingTestApp",
   "version": "0.0.0",
   "description": "TypingTestApp",
-  "main": "app.js",
+  "main": "API/server.js",
+  "scripts": {
+    "start": "node API/server.js"
+  },
   "author": {
     "name": "Bassam Al Rubaye",
     "email": ""
