@@ -32,7 +32,7 @@ angular
     
     this.getPargraphById= function(){
 		
-		return $http.get("http://localhost:3002/test/55f0cb6fa24ba7cc41ec1adf")	;
+		return $http.get("http://localhost:8080/test/55f0cb6fa24ba7cc41ec1adf")	;
 	};
     
 }]);

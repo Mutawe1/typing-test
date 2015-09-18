@@ -8,7 +8,7 @@ gulp.task("html", function () {
 });
 
 gulp.task("webserver", function (){
-    gulp.src("app/src").pipe(webserver({
+    gulp.src("app/build").pipe(webserver({
         livereload: true,
         open: true
     }));
@@ -21,9 +21,12 @@ gulp.task("concat", function(){
     .pipe(gulp.dest('app/src'));    
 });
 
+
 gulp.task("copy", function() {
-    gulp.src(["app/src/script.js" , 'app/src/assets/**/**/*', 'app/src/index.html', 'app/src/**/*.html'])
+    gulp.src(["app/src/script.js" , 'app/src/assets/**/**/*', 'app/src/index.html', 'app/src/**/*.html'], {base:'app/src'})
     .pipe(gulp.dest("app/build"));
 });
 
+
 gulp.task("default", ["webserver", "html", "concat", "copy"]);
+gulp.task("build", ["concat", "copy"]);

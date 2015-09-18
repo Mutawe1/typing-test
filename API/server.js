@@ -15,7 +15,7 @@ var mongoose= require("mongoose");
 var paragraph= require("./models/paragraph");
 var paragraphService= require('./services/paragraphService');
 
-
+//Specify port for use in heroku
 var port = process.env.PORT || 8080;
 
 for (var key in paragraphService) {
