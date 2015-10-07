@@ -7,3 +7,4 @@ app/build
 /coverage/
 /app/build/
 /app/test/coverage/
+/bower.json
