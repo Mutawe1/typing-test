@@ -19,7 +19,9 @@ module.exports = function(config) {
     'app/bower_components/angular/angular.js',
     'app/bower_components/angular-route/angular-route.js',
     'app/bower_components/angular-mocks/angular-mocks.js',
-    'app/components/**/*.js'
+    'app/src/app.js',
+    'app/src/components/**/*.js',
+    'app/test/spec/components/**/*.js'
     ],
 
 
@@ -56,10 +58,24 @@ module.exports = function(config) {
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: true,
 
+    reporters: ['mocha', 'coverage'],
+    preprocessors: { 'app/src/components/**/*.js': ['coverage']
+                       },
+    coverageReporter: {
+            type : 'lcov',
+            dir : 'app/test/coverage/'
+        },                   
 
     // start these browsers
-    // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: ['Chrome'],
+    // Start these browsers, currently available:
+        // - Chrome
+        // - ChromeCanary
+        // - Firefox
+        // - Opera
+        // - Safari (only Mac)
+        // - PhantomJS
+        // - IE (only Windows)
+        browsers: ['PhantomJS'],
 
 
     // Continuous Integration mode

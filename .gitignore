@@ -1,5 +1,9 @@
 .DS_Store
 node_modules
 bower_components
- .vscode/
- app/build
+.vscode/
+app/build
+/app/bower_components/
+/coverage/
+/app/build/
+/app/test/coverage/
